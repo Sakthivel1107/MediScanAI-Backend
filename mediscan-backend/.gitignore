@@ -1,0 +1,40 @@
+# Compiled output
+target/
+*.class
+
+# Logs
+*.log
+logs/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.settings/
+.project
+.classpath
+bin/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment / secrets
+.env
+.env.local
+*.pem
+*.key
+
+# Uploaded files (local dev storage)
+uploads/
+
+# Maven
+.mvn/wrapper/maven-wrapper.jar
+dependency-reduced-pom.xml
+
+# Test / coverage
+*.exec
+coverage/
+
+# Node (in case tooling scripts are added later)
+node_modules/
