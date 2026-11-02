@@ -21,14 +21,13 @@ RUN apt-get update && \
     tesseract-ocr-eng && \
     rm -rf /var/lib/apt/lists/*
 
-# Verify installation
+# Verify actual installation
 RUN tesseract --version && \
     dpkg -L tesseract-ocr-eng | grep eng.traineddata && \
     tesseract --list-langs
 
 # Tesseract configuration
-ENV TESSERACT_PATH=/usr/share/tesseract-ocr/4.00/tessdata
-ENV TESSDATA_PREFIX=/usr/share/tesseract-ocr/4.00/tessdata
+ENV TESSERACT_PATH=/usr/share/tesseract-ocr/4.00
 ENV TESSERACT_LANGUAGE=eng
 
 
