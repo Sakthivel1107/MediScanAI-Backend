@@ -25,8 +25,9 @@ RUN apt-get update && \
 COPY --from=build /app/target/*.jar app.jar
 
 # Configure Tesseract
-ENV TESSERACT_PATH=/usr/share/tesseract-ocr/5/tessdata
+ENV TESSERACT_PATH=/usr/share/tesseract-ocr/5
 ENV TESSERACT_LANGUAGE=eng
+ENV TESSDATA_PREFIX=/usr/share/tesseract-ocr/5
 
 # Start Spring Boot using Render's assigned port
 CMD ["sh", "-c", "java -Dserver.port=${PORT:-10000} -jar app.jar"]
